@@ -97,3 +97,10 @@ li.menu-item:hover {
   top: 0;
   right: 0;
 }
+
+.nav-menu {
+  color:rgb(8, 105, 64);;
+  border:2px solid rgb(8, 105, 64);
+  padding:3px;
+  font-family: linetoCircularBold;
+}
