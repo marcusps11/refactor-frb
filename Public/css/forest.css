@@ -1,0 +1,160 @@
+@font-face {
+  font-family: linetoCircularBold;
+  src: url(./fonts/lineto-circular-bold.ttf);
+}
+
+@font-face {
+  font-family: linetoCircularBook;
+  src: url(./fonts/lineto-circular-book.ttf);
+}
+
+@font-face {
+  font-family: sanchezRegular;
+  src: url(./fonts/Sanchez-Regular.ttf);
+}
+
+body {
+  font-family: sanchezRegular;
+}
+
+
+
+a{
+  font-family: linetoCircularBold;
+  color:#fff;
+} 
+
+h1{
+  font-family: linetoCircularBold;
+  color:rgb(8, 105, 64);
+  font-size: 72px;
+}
+
+h2 {
+  font-family:linetoCircularBook 
+}
+
+
+p {
+	font-size: 25px;
+	padding:15px;
+	color
+}
+
+#science {
+	width:100%;
+	height:768px
+}
+#product {
+
+	height:768px;
+	width:100%;
+}
+
+#science {
+	width:100%;
+
+	height:768px;
+}
+
+#work {
+	width:100%;
+	height:768px;
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+	background-position: center center;
+	overflow: hidden;
+	color:#fff;
+
+}
+
+.heading {
+	margin-top: 300px;
+}
+
+.two-column-content {
+	margin-top: 20px;
+}
+.bottle {
+height:75%;
+}
+
+.social-container {
+	width:100%%;
+	background-color: #fff;
+	border: 15px solid rgb(8, 105, 64);
+}
+
+.form-control {
+	margin-top:30px;
+	border: 3px solid rgb(8, 105, 64);
+}
+
+button {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 110px;
+	height:40px;
+	border:3px solid rgb(8, 105, 64);
+	background-color: #fff;
+	font-family: linetoCircularBook;
+	color:rgb(8, 105, 64);
+}
+
+
+.contact-icons {
+	margin-bottom: 30px;
+}
+
+.contact-icons span {
+	padding:10px;
+}
+
+.contact-heading {
+	padding:20px;
+}
+.contact-h2 {
+	line-height: 30px;
+}
+.list-inline {
+	padding:20px;
+	color:#fff;
+}
+
+.logo {
+	position: absolute;
+	left:10px;
+	top:20px;
+}
+
+footer {
+	background-color: rgb(8, 105, 64);
+	margin-top: 30px;
+}
+
+footer .footer-logo {
+	width:80px;
+	padding-bottom:20px;
+}
+
+footer .list-inline li {
+	padding-left: 70px;
+	padding-right:70px;
+	color:#fff;
+}
+
+
+@media screen and (max-width: 650px) {
+    p {
+    	font-size: 22px;
+    }
+
+    .bottle {
+    	width:60px;
+    	height:auto;
+    }
+
+    .move-down {
+    	margin-top: 100px;
+    }
+}
