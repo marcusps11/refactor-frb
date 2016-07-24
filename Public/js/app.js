@@ -1,18 +1,28 @@
-$(initialize);
+$(document).ready(function() {
+  Frb.initialize();
+  Frb.twitter.getTweets();
+})
 
-function initialize() {
+
+
+var Frb = Frb || {};
+
+
+
+
+Frb.initialize = function() {
   $('.fa-bars').on('click', function() {
     if( $(this).hasClass('open-menu') ) {
-      hideMenuItems();
+      Frb.hideMenuItems();
 
       setTimeout(closeMenu, 1250);
     } else {
-      openMenu();
+      Frb.openMenu();
     }
   });
 }
 
-function openMenu() {
+Frb.openMenu = function() {
   $('.fa-bars').removeClass('close-menu');
   $('.fa-bars').addClass('open-menu');
 
@@ -21,20 +31,39 @@ function openMenu() {
     $('ol').removeClass('hidden');
   });
 
-  setTimeout(showMenuItems, 800);
+  setTimeout(Frb.showMenuItems, 800);
 }
 
-function closeMenu() {
+Frb.closeMenu = function() {
   $('.fa-bars').removeClass('open-menu');
 }
 
-function showMenuItems() {
+Frb.showMenuItems = function() {
   $('ol').removeClass('hidden');
 }
 
-function hideMenuItems() {
+Frb.hideMenuItems = function() {
   $('ol').addClass('animated slideOutRight').one('webkitAnimationEnd', function() {
     $(this).removeClass('animated slideOutRight');
     $(this).addClass('hidden');
   });
 }
+
+Frb.twitter = {};
+
+Frb.twitter.getTweets = function() {
+  var ajax = $.ajax({
+    method: "get",
+    url: 'http://localhost:3000/api/twitter'
+  }).done(function(data){
+      console.log(data);
+      Frb.twitter.showData(data);
+  });
+};
+
+Frb.twitter.showData = function(data) {
+  $('#twitter').append("<p>" + data.tweets + "</p>" )
+};
+
+
+
