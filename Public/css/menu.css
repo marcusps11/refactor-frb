@@ -100,7 +100,7 @@ li.menu-item:hover {
 
 .nav-menu {
   color:rgb(8, 105, 64);;
-  border:2px solid rgb(8, 105, 64);
-  padding:3px;
+  padding:13px;
   font-family: linetoCircularBold;
+  font-size: 20px;
 }
