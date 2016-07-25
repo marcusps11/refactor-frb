@@ -63,8 +63,8 @@ a {
 
 hr {
   margin-top: 5px;
-  height: 1px;
-  background-color: #fff;
+  height: 2px;
+  background-color: rgb(8, 105, 64);
 }
 
 div.links a {
