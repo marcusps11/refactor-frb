@@ -43,6 +43,10 @@ h2 {
   font-family: sanchezRegular;
 }
 
+iframe {
+  width: 100%;
+}
+
 section {
 	overflow: auto;
   border-left: 40px solid rgb(8, 105, 64);
