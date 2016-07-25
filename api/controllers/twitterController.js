@@ -10,11 +10,11 @@ var Client = new Twitter({
 
 function getTweets(req, res) {
 	console.log('yo')
-	Client.get('statuses/user_timeline', {user_id: 1052583974}, function(error, tweets) {
+	Client.get('statuses/user_timeline', {user_id: 3375835551}, function(error, tweets) {
 			if (error) {
 			console.log(error);
 		} else {
-			console.log(tweets[0].text);
+			console.log(tweets);
 		}
 		res.status(200).json({tweets: tweets[0].text});
 	});

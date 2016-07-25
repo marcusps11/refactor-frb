@@ -21,6 +21,15 @@
   <link rel="stylesheet" href="css/forest.css">
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <nav class="topbar">
     <ul>
       <li><i class="fa fa-bars"></i></li>
@@ -42,6 +51,9 @@
        <div class="row">
         <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 heading">
           <p>helllo</p>
+          <div class="fb-post" 
+          data-href="https://www.facebook.com/20531316728/posts/10154009990506729/"
+          data-width="500"></div>
         </div>
       </div>
     </div>
@@ -52,7 +64,7 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-sm-4 col-sm-4 col-sm-offset-1 two-column-content ">
+        <div class="col-sm-3 col-sm-3 col-sm-offset- two-column-content ">
 
           <div class="dotted-break ">
           </div>
@@ -60,13 +72,13 @@
 
         </div>
 
-        <div class="col-sm-4 col-sm-4 col-sm-offset-2 two-column-content center-block ">
+        <div class="col-sm-8 col-sm-8 col-sm-offset-1 two-column-content center-block ">
           <h1>work.</h1>
           <hr>
           <div class="dotted-break ">
             <span></span><span></span><span></span><span></span><span></span>
           </div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+          <p>our flagship hopped ale: ​this 6-grain unfiltered IPA gets tucked into it's boil with a first wort hop addition, and then continually smashed over the last 20 minutes of its hot life with a blend of some of the finest Northwest American hops, then cooled down and innoculated with a proprietary yeast strain, developed by White Labs in Copenhagen (we'll never tell). Prior to limit attenuation, and again 72 hours thereafter, WORK gets 2 doses of dryhopping, right before it's graduated cold maturation phase, where it ends up lagering at 0º C for the next 21 days.  Bright, crisp, and juicy bitterness leaves the palate just as quick as it walked in the door leaving the drinker with a refreshing experience.  Artsy enough? we like to let WORK speak for itself. You are the drinker, let your senses decide how it really is.<p>
             <button class="center-block">Try it</button>
           </div>
 
@@ -78,15 +90,16 @@
       <div class="container ">
 
         <div class="row">
-          <div class="col-sm-4 col-sm-4 col-sm-offset-1 two-column-content move-down">
+          <div class="col-sm-6 col-sm-6 col-sm-offset-1 two-column-content move-down">
             <h1>its science bitch</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lod </p>
+            <hr>
+            <p>Our headbrewer Pete brewed professionally at 4 craft breweries in 2 countries over 7 years before devoting his experience and passion into developing the recipes for our beer.  We ensure that our beers are made with the utmost care and attention to technical details, so that our drinkers can enjoy the most consistent quality craft beer we are capable of making, pint after pint. All of our beer is proudly brewed by Pete at Brouwerij Van Eecke in Flanders, Belgium while we locate a premise for our East London plant and brewpub, which we are currently in planning to open mid 2017</p>
             <div class="dotted-break ">
               <span></span><span></span><span></span><span></span><span></span>
             </div>
 
           </div>
-          <div class="col-sm-4 col-sm-4 col-sm-offset-2 two-column-content ">
+          <div class="col-sm-3 col-sm-3 col-sm-offset-2 two-column-content ">
 
           </div>
         </div>
@@ -136,45 +149,55 @@
 
         <div class="row">
           <div class="col-sm-4 col-sm-4 col-sm-offset-1 social-container ">
-            <div id="instagram">
-            </div>
+            <div id="instagram" ></div>
+            <div id="caption"></div>
+            <a href=""><p>follow us on instagram</p></a>
+
+
 
           </div>
           <div class="col-sm-4 col-sm-4 col-sm-offset-2 social-container  ">
-            <div id="twitter">
+            <div id="twitter" > </div>
+            <hr>
+            <img class="twitter-logo caption-block " src="images/forest-twitter.png">
+            <p class="social text caption-block" >Forest Road Brewing<br>
+              @forestroadbrew</p>
+              <a href=""><p>follow us on twitter</p></a>
+              
+
+              
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </main>
+      </main>
 
 
-    <!-- Footer -->
-    <footer>
-      <div class="navbar  footer">
-       <div class="container-fluid">
-         <div class="row-fluid">
-           <div class="col-xs-6 col-md-4 col-lg-3">
-             <ul>
-               <li><img class="footer-logo" src="images/forest_noback.png"></li>
-             </ul>
-           </div>
-           <div class="col-xs-6 col-md-4 col-lg-3">
-             <p>Back to the top</p>
-           </div>
-           <div class="col-xs-6 col-md-4 col-lg-3">
-             <p>Somethign else</p>
-           </div>
-           <div class="col-xs-6 col-md-4 col-lg-3">
-             <p>97 B/c Forest road</p>
+      <!-- Footer -->
+      <footer>
+        <div class="navbar  footer">
+         <div class="container-fluid">
+           <div class="row-fluid">
+             <div class="col-xs-6 col-md-4 col-lg-3">
+               <ul>
+                 <li><img class="footer-logo" src="images/forest_noback.png"></li>
+               </ul>
+             </div>
+             <div class="col-xs-6 col-md-4 col-lg-3">
+               <p>Back to the top</p>
+             </div>
+             <div class="col-xs-6 col-md-4 col-lg-3">
+               <p>Somethign else</p>
+             </div>
+             <div class="col-xs-6 col-md-4 col-lg-3">
+               <p>97 B/c Forest road</p>
+             </div>
            </div>
          </div>
        </div>
-     </div>
 
-   </footer>
+     </footer>
 
 
- </body>
- </html>
+   </body>
+   </html>

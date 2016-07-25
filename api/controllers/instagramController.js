@@ -29,8 +29,9 @@ function handleauth(req, res) {
 function getInstagram(req, res) {
 	Instagram.use({ access_token: '2318438226.69154b0.10dc1e9b76b147f4918d061648d7a6af' });
 	Instagram.user_media_recent('2318438226', function(err, medias, pagination, remaining, limit){ 
-		console.log(medias[0].images.standard_resolution.url)
-		res.json(medias[0].images.standard_resolution.url)
+		console.log(medias[0].caption.text)
+		res.json({image: medias[0].images.standard_resolution.url,
+							caption:medias[0].caption.text })
 	});
 }
 

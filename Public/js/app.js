@@ -63,7 +63,7 @@ Frb.twitter.getTweets = function() {
 };
 
 Frb.twitter.showData = function(data) {
-  $('#twitter').append("<p>" + data.tweets + "</p>" )
+  $('#twitter').append("<p class='social'>" + data.tweets + "</p>" )
 };
 
 
@@ -80,7 +80,8 @@ Frb.instagram.getPhotos = function() {
 };
 
 Frb.instagram.showData = function(data) {
-  $('#instagram').append("<img class='img-responsive instagram' src=" + data + ">" );
+  $('#instagram').append("<img class='img-responsive instagram' src=" + data.image + ">" );
+  $('#caption').append("<p class='social'>" + data.caption + "</p><hr>" )
 };
 
 

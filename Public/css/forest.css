@@ -34,9 +34,11 @@ h2 {
   font-family:linetoCircularBook 
 }
 
-
+section {
+	overflow: auto;
+}
 p {
-	font-size: 25px;
+	font-size: 22px;
 	padding:15px;
 	color
 }
@@ -81,8 +83,12 @@ height:75%;
 
 .social-container {
 	width:100%%;
-	background-color: #fff;
-	border: 15px solid rgb(8, 105, 64);
+	background-color: rgb(8, 105, 64);
+	color:#fff;
+}
+
+.instagram {
+	padding:10px;
 }
 
 .form-control {
@@ -130,6 +136,24 @@ button {
   background-color: red;
 }
 
+.social {
+	font-size: 18px;
+	font-family: linetoCircularBook;
+
+}
+
+.twitter-logo {
+	border-radius: 22px;
+	padding:10px;
+	position: relative;
+	top:-15px;
+}
+
+.caption-block {
+	display: inline-block;
+}
+
+
 footer {
 	background-color: rgb(8, 105, 64);
 	margin-top: 30px;
@@ -151,7 +175,7 @@ footer .list-inline li {
 
 @media screen and (max-width: 650px) {
     p {
-    	font-size: 22px;
+    	font-size: 18px;
     }
 
     .bottle {
