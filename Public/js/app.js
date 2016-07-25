@@ -1,6 +1,7 @@
 $(document).ready(function() {
   Frb.initialize();
   Frb.twitter.getTweets();
+  Frb.instagram.getPhotos();
 })
 
 
@@ -64,6 +65,24 @@ Frb.twitter.getTweets = function() {
 Frb.twitter.showData = function(data) {
   $('#twitter').append("<p>" + data.tweets + "</p>" )
 };
+
+
+Frb.instagram = {};
+
+Frb.instagram.getPhotos = function() {
+  var ajax = $.ajax({
+    method: "get",
+    url: 'http://localhost:3000/api/instagram/get'
+  }).done(function(data){
+      console.log(data);
+      Frb.instagram.showData(data);
+  });
+};
+
+Frb.instagram.showData = function(data) {
+  $('#instagram').append("<img class='img-responsive instagram' src=" + data + ">" );
+};
+
 
 
 

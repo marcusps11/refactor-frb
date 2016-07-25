@@ -1,10 +1,9 @@
 var request = require('request');
 var Instagram = require('instagram-node').instagram();
 
-Instagram.use({ access_token: '8a8dcfb52d084143833a43072b11efff' });
 
-Instagram.use({ client_id: '7056aa7f2ef24f1286c943359d0a3c98',
-         			client_secret: 'c571c6e1a6274323bbf9d90613f03f7c' });
+Instagram.use({ client_id: '69154b04b9614f809300b576c53f5ac3',
+         			client_secret: '0cec0a11389a493c8d1e08bf0e32f9e2' });
 
 var baseURL = 'https://api.instagram.com/oauth/authorize';
 var redirect_uri = 'http://localhost:3000/api/instagram/callback';
@@ -28,9 +27,11 @@ function handleauth(req, res) {
 
 
 function getInstagram(req, res) {
-Instagram.user('3461258', function(err, result, remaining, limit) {
-	console.log(result)
-});
+	Instagram.use({ access_token: '2318438226.69154b0.10dc1e9b76b147f4918d061648d7a6af' });
+	Instagram.user_media_recent('2318438226', function(err, medias, pagination, remaining, limit){ 
+		console.log(medias[0].images.standard_resolution.url)
+		res.json(medias[0].images.standard_resolution.url)
+	});
 }
 
 
