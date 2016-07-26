@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="images/umbrella-favicon.ico">
+  <link rel="icon" href="images/favicon.ico">
   <title>Forest Road Brewing Co</title>
 
   <!-- JS -->
   <script type="text/javascript" src="js/vendor/jquery.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/contactform.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/vendor/reset.css">
@@ -22,15 +23,9 @@
 </head>
 <body>
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
-  <nav class="topbar">
+
+ <!--  <nav class="topbar">
     <ul>
       <li><i class="fa fa-bars"></i></li>
       <li class="animate-container">
@@ -42,7 +37,31 @@
       </li>
       <img class="logo" src="images/logo.png">
     </ul>
-  </nav>
+  </nav> -->
+
+  <header id="header">
+    <!-- Static navbar -->
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="logo" src="images/logo.png">
+        </div>
+        <nav class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="homebuttons"><a href="#home" class="j-scroll" title="Science">Home</a></li>
+            <li class="homebuttons"><a href="#features" class="j-scroll" title="Work">Work</a></li>
+            <li class="homebuttons"><a href="#contact" class="j-scroll" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
   <main>
 
 
@@ -59,7 +78,7 @@
   </section>
 
 
-  <section id="science">
+  <section id="work">
     <div class="container">
 
       <div class="row">
@@ -85,7 +104,7 @@
       </div>
     </section>
 
-    <section id="work">
+    <section id="science">
       <div class="container ">
 
         <div class="row">
@@ -196,7 +215,5 @@
        </div>
 
      </footer>
-
-
    </body>
    </html>
