@@ -8,7 +8,7 @@ var methodOverride  = require("method-override");
 var app 						= express();
 var twitter = require('./controllers/twitterController');
 var instagram = require('./controllers/instagramController');
-var sendgrid = require('./controllers/mailgunController');
+var mailgun = require('./controllers/mailgunController');
 
 
 app.use(methodOverride(function(req, res){

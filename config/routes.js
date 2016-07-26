@@ -3,7 +3,7 @@ var router 	= express.Router();
 
 var twitterController = require('../controllers/twitterController');
 var instagramController = require('../controllers/instagramController');
-var sendgridController = require('../controllers/sendgridController');
+var mailgunController = require('../controllers/mailgunController');
 
 
 
@@ -14,8 +14,8 @@ router.route('/twitter')
 router.route('/instagram')
 .get(instagramController.authorize_user);
 
-// router.route('/sendmessage')
-// .post(sendgridController.sendMessage);
+router.route('/sendmessage')
+.post(mailgunController.sendMessage);
 
 
 router.route('/instagram/callback')

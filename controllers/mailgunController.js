@@ -1,32 +1,34 @@
 
-// key-a0c98143c2e3a66fe879e37b225f14e4 API SECRET
-// pubkey-e60a71f7446890801c4c3543fbbd1c64 API PUBLIC
+var api_key = 'key-a0c98143c2e3a66fe879e37b225f14e4';
+var domain = 'mg.forestroad.co.uk';
+var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
 
-// ("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");
-
-// var email = new sendgrid.Email();
 
 function sendMessage(req, res) {
+	console.log(req.body);
 	var msg = {
-	  to:       'marcusps1@gmail.com',
-	  from:     req.body.email,
-	  subject:  'Hello World',
-	  text:     req.body.msg
+		to:       'marcusps1@gmail.com',
+		from:     'Excited User <me@samples.mailgun.org>',
+		subject:  'Hello World',
+		text:     req.body.msg
 	};
 
-	sendgrid.send(msg, function(err, msg) {
-	console.log(msg)
-	  if (err) {
-	    res.json(err);
-	  } else {
-	    res.json({
-	      data: msg,
-	      status: 'success'
-	    });
-	  }
+	mailgun.messages().send(msg, function (error, data) {
+		console.log(arguments, '<<<');
+
+		if (error) {
+			console.log(error);
+			res.json(error);
+		} else {
+			res.json({
+				data: data,
+				status: 'success'
+			});
+		}
 	});
 }
 
+
 module.exports = {
-	// sendMessage: sendMessage
+	sendMessage: sendMessage
 };
