@@ -8,13 +8,12 @@ function sendMessage(req, res) {
 	console.log(req.body);
 	var msg = {
 		to:       'marcusps1@gmail.com',
-		from:     'Excited User <me@samples.mailgun.org>',
-		subject:  'Hello World',
+		from:     req.body.email,
+		subject:  'Beer orders',
 		text:     req.body.msg
 	};
 
 	mailgun.messages().send(msg, function (error, data) {
-		console.log(arguments, '<<<');
 
 		if (error) {
 			console.log(error);

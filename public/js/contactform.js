@@ -55,7 +55,6 @@ jQuery(function($) {
   ContactService = {
     sendContactXHR: function(payload) {
       var defer = $.Deferred();
-      debugger;
 
       $.ajax({
         type: 'POST',
@@ -63,7 +62,15 @@ jQuery(function($) {
         data: payload
       }).success(function(response) {
         defer.resolve(response);
-        console.log('hello')
+        $('#msgInfo').html("<div class='alert alert-success'>");
+        $('#msgInfo > .alert-success')
+        .append("<strong>Your message has been sent.</strong>");
+        $('#msgInfo > .alert-success')
+        .append('</div>');
+        console.log('Your message has been sent. Thank you!');
+        $("#name").val('');
+        $("#email").val('');
+        $("#msg").val('');
    
       }).fail(function(error) {
         defer.reject(error);
