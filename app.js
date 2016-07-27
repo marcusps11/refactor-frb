@@ -44,7 +44,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-
+app.get('/', function(req, res) {
+  if (err) console.log(err);
+  res.render('index');
+});
 
 app.use("/api", routes);
 
