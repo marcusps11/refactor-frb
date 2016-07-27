@@ -6,7 +6,8 @@
   "scripts": {
     "api": "nodemon app.js",
     "static": "live-reload --port 9091 public",
-    "develop": "npm run api"
+    "develop": "npm run api",
+    "start": "node app.js"
   },
   "author": "Marcus Petty-Saphon",
   "license": "ISC",
