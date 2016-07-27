@@ -55,7 +55,7 @@ Frb.twitter = {};
 Frb.twitter.getTweets = function() {
   var ajax = $.ajax({
     method: "get",
-    url: 'http://localhost:3000/api/twitter'
+    url: 'http://frb-refactor.herokuapp.com/api/twitter'
   }).done(function(data){
       console.log(data);
       Frb.twitter.showData(data);
@@ -72,7 +72,7 @@ Frb.instagram = {};
 Frb.instagram.getPhotos = function() {
   var ajax = $.ajax({
     method: "get",
-    url: 'http://localhost:3000/api/instagram/get'
+    url: 'http://frb-refactor.herokuapp.com/api/instagram/get'
   }).done(function(data){
       console.log(data);
       Frb.instagram.showData(data);

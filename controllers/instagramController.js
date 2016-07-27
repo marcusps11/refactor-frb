@@ -6,7 +6,7 @@ Instagram.use({ client_id: '69154b04b9614f809300b576c53f5ac3',
          			client_secret: '0cec0a11389a493c8d1e08bf0e32f9e2' });
 
 var baseURL = 'https://api.instagram.com/oauth/authorize';
-var redirect_uri = 'http://localhost:3000/api/instagram/callback';
+var redirect_uri = 'http://frb-refactor.herokuapp.com/api/instagram/callback';
 
 function authorize_user(req, res) {
 	console.log('g')
