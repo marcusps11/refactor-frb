@@ -27,7 +27,7 @@ app.use(express.static('public'));
 
 app.get("/", function(req, res) {
   console.log('hello')
-  res.render("index.html")
+  res.render("index")
 });
 
 var routes = require('./config/routes');
