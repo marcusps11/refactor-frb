@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
-app.use('/', express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // app.get("/", function(req, res) {
 //   console.log('hello')
