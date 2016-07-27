@@ -25,6 +25,11 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static('public'));
 
+app.get("/", function(req, res) {
+  console.log('hello')
+  res.render("index.html")
+});
+
 var routes = require('./config/routes');
 
 
@@ -45,10 +50,7 @@ app.use(function(req, res, next) {
 });
 
 
-app.get('/', function(req, res) {
-  if (err) console.log(err);
-  res.render('index.html');
-});
+
 
 app.use("/api", routes);
 
